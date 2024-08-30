@@ -26,6 +26,9 @@ dependencies:
   '@emotion/styled':
     specifier: ^11.11.5
     version: 11.13.0(@emotion/react@11.13.3)(@types/react@18.3.4)(react@18.3.1)
+  '@fontsource/public-sans':
+    specifier: ^5.0.18
+    version: 5.0.18
   '@fullcalendar/core':
     specifier: ^6.1.14
     version: 6.1.15
@@ -3141,6 +3144,10 @@ packages:
 
   /@floating-ui/utils@0.2.7:
     resolution: {integrity: sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==}
+    dev: false
+
+  /@fontsource/public-sans@5.0.18:
+    resolution: {integrity: sha512-dYx/ULF7pRkjBO1ncCwIRXWWmI2oCsMsWxheHgjtNANm4+prtfq3gdGy3KOsuNcAhEKn6BQeIyg0hFqeoTpAaQ==}
     dev: false
 
   /@fullcalendar/core@6.1.15:
