@@ -4,7 +4,7 @@ import type { TypographyOptions } from '@mui/material/styles/createTypography';
 
 // ----------------------------------------------------------------------
 
-export type Theme = Omit<BaseTheme, 'palette' | 'applyStyles'> & CssVarsTheme;
+type Theme = Omit<BaseTheme, 'palette' | 'applyStyles'> & CssVarsTheme;
 
 export type ThemeUpdateOptions = Omit<CssVarsThemeOptions, 'typography'> & {
   typography?: TypographyOptions;

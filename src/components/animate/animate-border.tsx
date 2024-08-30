@@ -17,7 +17,7 @@ import { borderGradient } from 'src/theme/styles';
  * https://gradientborder.framer.website/
  */
 
-export type AnimateBorderProps = BoxProps & {
+type AnimateBorderProps = BoxProps & {
   animate?: {
     outline?: string;
     color?: string | string[];

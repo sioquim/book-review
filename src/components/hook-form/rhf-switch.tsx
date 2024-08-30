@@ -17,7 +17,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 // ----------------------------------------------------------------------
 
-export type RHFSwitchProps = Omit<FormControlLabelProps, 'control'> & {
+type RHFSwitchProps = Omit<FormControlLabelProps, 'control'> & {
   name: string;
   helperText?: React.ReactNode;
   slotProps?: {

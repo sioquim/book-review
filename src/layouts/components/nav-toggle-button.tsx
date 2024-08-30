@@ -7,7 +7,7 @@ import { varAlpha } from 'src/theme/styles';
 
 // ----------------------------------------------------------------------
 
-export type NavToggleButtonProps = IconButtonProps & {
+type NavToggleButtonProps = IconButtonProps & {
   isNavMini: boolean;
 };
 

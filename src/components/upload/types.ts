@@ -5,9 +5,9 @@ import type { FileThumbnailProps } from '../file-thumbnail';
 
 // ----------------------------------------------------------------------
 
-export type FileUploadType = File | string | null;
+type FileUploadType = File | string | null;
 
-export type FilesUploadType = (File | string)[];
+type FilesUploadType = (File | string)[];
 
 export type SingleFilePreviewProps = {
   file: File | string;

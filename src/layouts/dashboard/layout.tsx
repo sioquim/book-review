@@ -21,7 +21,7 @@ import { navData as dashboardNavData } from '../config-nav-dashboard';
 
 // ----------------------------------------------------------------------
 
-export type DashboardLayoutProps = {
+type DashboardLayoutProps = {
   sx?: SxProps<Theme>;
   children: React.ReactNode;
   data?: {

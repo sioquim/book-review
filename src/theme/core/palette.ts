@@ -52,7 +52,7 @@ declare module '@mui/material' {
   }
 }
 
-export type ColorType = 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error';
+type ColorType = 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error';
 
 // ----------------------------------------------------------------------
 

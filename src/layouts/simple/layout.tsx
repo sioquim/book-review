@@ -12,7 +12,7 @@ import { LayoutSection } from '../core/layout-section';
 
 // ----------------------------------------------------------------------
 
-export type SimpleLayoutProps = {
+type SimpleLayoutProps = {
   sx?: SxProps<Theme>;
   children: React.ReactNode;
   content?: {

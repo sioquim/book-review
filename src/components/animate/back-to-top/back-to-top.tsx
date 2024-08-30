@@ -9,7 +9,7 @@ import { Iconify } from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
-export type BackToTopProps = FabProps & {
+type BackToTopProps = FabProps & {
   value?: number;
 };
 

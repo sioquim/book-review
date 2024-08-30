@@ -9,7 +9,7 @@ import { CONFIG } from 'src/config-global';
 
 // ----------------------------------------------------------------------
 
-export type FlagIconProps = {
+type FlagIconProps = {
   code?: string;
   sx?: SxProps<Theme>;
 };

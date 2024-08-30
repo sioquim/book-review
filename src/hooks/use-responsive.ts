@@ -9,9 +9,9 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 type UseResponsiveReturn = boolean;
 
-export type Query = 'up' | 'down' | 'between' | 'only';
+type Query = 'up' | 'down' | 'between' | 'only';
 
-export type Value = Breakpoint | number;
+type Value = Breakpoint | number;
 
 export function useResponsive(query: Query, start?: Value, end?: Value): UseResponsiveReturn {
   const theme = useTheme();

@@ -20,7 +20,7 @@ import { Form, Field } from 'src/components/hook-form';
 
 // ----------------------------------------------------------------------
 
-export type ReviewSchemaType = zod.infer<typeof bookReviewSchema>;
+type ReviewSchemaType = zod.infer<typeof bookReviewSchema>;
 
 
 // ----------------------------------------------------------------------

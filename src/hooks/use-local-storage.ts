@@ -5,7 +5,7 @@ import { localStorageGetItem } from 'src/utils/storage-available';
 
 // ----------------------------------------------------------------------
 
-export type UseLocalStorageReturn<T> = {
+type UseLocalStorageReturn<T> = {
   state: T;
   canReset: boolean;
   resetState: () => void;

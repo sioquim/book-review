@@ -14,7 +14,7 @@ import { logoClasses } from './classes';
 
 // ----------------------------------------------------------------------
 
-export type LogoProps = BoxProps & {
+type LogoProps = BoxProps & {
   href?: string;
   disableLink?: boolean;
 };

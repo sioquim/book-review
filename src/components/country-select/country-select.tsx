@@ -20,7 +20,7 @@ import { getCountry, displayValueByCountryCode } from './utils';
 
 type Value = string;
 
-export type AutocompleteBaseProps = Omit<
+type AutocompleteBaseProps = Omit<
   AutocompleteProps<any, boolean, boolean, boolean>,
   'options' | 'renderOption' | 'renderInput' | 'renderTags' | 'getOptionLabel'
 >;

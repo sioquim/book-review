@@ -12,7 +12,7 @@ import { varHover, AnimateAvatar } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
 
-export type AccountButtonProps = IconButtonProps & {
+type AccountButtonProps = IconButtonProps & {
   open: boolean;
   photoURL: string;
   displayName: string;

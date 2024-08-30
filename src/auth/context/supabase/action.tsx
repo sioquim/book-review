@@ -15,13 +15,13 @@ import { supabase } from 'src/lib/supabase';
 
 // ----------------------------------------------------------------------
 
-export type SignInParams = {
+type SignInParams = {
   email: string;
   password: string;
   options?: SignInWithPasswordCredentials['options'];
 };
 
-export type SignUpParams = {
+type SignUpParams = {
   email: string;
   password: string;
   firstName: string;
@@ -29,7 +29,7 @@ export type SignUpParams = {
   options?: SignUpWithPasswordCredentials['options'];
 };
 
-export type ResetPasswordParams = {
+type ResetPasswordParams = {
   email: string;
   options?: {
     redirectTo?: string;
@@ -37,7 +37,7 @@ export type ResetPasswordParams = {
   };
 };
 
-export type UpdatePasswordParams = {
+type UpdatePasswordParams = {
   password: string;
   options?: {
     emailRedirectTo?: string | undefined;

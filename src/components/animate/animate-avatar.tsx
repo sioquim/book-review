@@ -9,7 +9,7 @@ import Avatar from '@mui/material/Avatar';
 
 // ----------------------------------------------------------------------
 
-export type AnimateAvatarProps = BoxProps & {
+type AnimateAvatarProps = BoxProps & {
   slotProps?: {
     avatar?: AvatarProps;
     animate?: { transition?: Transition };

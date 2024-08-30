@@ -25,7 +25,7 @@ import { upsertBook, generateSummary } from 'src/app/(index)/actions';
 import { toast } from 'src/components/snackbar';
 import { Form, Field } from 'src/components/hook-form';
 
-export type NewBookSchemaType = zod.infer<typeof newBookSchema>;
+type NewBookSchemaType = zod.infer<typeof newBookSchema>;
 
 type Props = {
   currentBook?: TablesUpdate<'book'>;

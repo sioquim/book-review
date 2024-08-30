@@ -21,17 +21,17 @@ import {
 
 // ----------------------------------------------------------------------
 
-export type SignInParams = SignInInput;
+type SignInParams = SignInInput;
 
-export type SignUpParams = SignUpInput & { firstName: string; lastName: string };
+type SignUpParams = SignUpInput & { firstName: string; lastName: string };
 
-export type ResendSignUpCodeParams = ResendSignUpCodeInput;
+type ResendSignUpCodeParams = ResendSignUpCodeInput;
 
-export type ConfirmSignUpParams = ConfirmSignUpInput;
+type ConfirmSignUpParams = ConfirmSignUpInput;
 
-export type ResetPasswordParams = ResetPasswordInput;
+type ResetPasswordParams = ResetPasswordInput;
 
-export type ConfirmResetPasswordParams = ConfirmResetPasswordInput;
+type ConfirmResetPasswordParams = ConfirmResetPasswordInput;
 
 /** **************************************
  * Sign in

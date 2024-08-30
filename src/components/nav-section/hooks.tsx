@@ -6,7 +6,7 @@ import type { NavItemProps } from './types';
 
 // ----------------------------------------------------------------------
 
-export type UseNavItemReturn = {
+type UseNavItemReturn = {
   subItem: boolean;
   rootItem: boolean;
   subDeepItem: boolean;
@@ -15,7 +15,7 @@ export type UseNavItemReturn = {
   renderInfo: React.ReactNode;
 };
 
-export type UseNavItemProps = {
+type UseNavItemProps = {
   path: NavItemProps['path'];
   icon?: NavItemProps['icon'];
   info?: NavItemProps['info'];

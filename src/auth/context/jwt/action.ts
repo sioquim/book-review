@@ -7,12 +7,12 @@ import { STORAGE_KEY } from './constant';
 
 // ----------------------------------------------------------------------
 
-export type SignInParams = {
+type SignInParams = {
   email: string;
   password: string;
 };
 
-export type SignUpParams = {
+type SignUpParams = {
   email: string;
   password: string;
   firstName: string;

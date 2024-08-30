@@ -5,7 +5,7 @@ import { useRef, useMemo, useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
 
-export type UseScrollOffSetTopReturn = {
+type UseScrollOffSetTopReturn = {
   offsetTop: boolean;
   elementRef: React.RefObject<HTMLDivElement>;
 };

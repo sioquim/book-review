@@ -9,7 +9,7 @@ import { layoutClasses } from '../classes';
 
 // ----------------------------------------------------------------------
 
-export type LayoutSectionProps = {
+type LayoutSectionProps = {
   sx?: SxProps<Theme>;
   cssVars?: CSSObject;
   children?: React.ReactNode;

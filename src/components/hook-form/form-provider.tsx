@@ -4,7 +4,7 @@ import { FormProvider as RHFForm } from 'react-hook-form';
 
 // ----------------------------------------------------------------------
 
-export type FormProps = {
+type FormProps = {
   onSubmit?: () => void;
   children: React.ReactNode;
   methods: UseFormReturn<any>;

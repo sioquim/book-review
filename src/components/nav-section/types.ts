@@ -3,7 +3,7 @@ import type { Theme, SxProps, CSSObject } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export type SlotProps = {
+type SlotProps = {
   rootItem?: NavItemSlotProps;
   subItem?: NavItemSlotProps;
   subheader?: SxProps<Theme>;
@@ -11,12 +11,12 @@ export type SlotProps = {
   currentRole?: string;
 };
 
-export type NavItemRenderProps = {
+type NavItemRenderProps = {
   navIcon?: Record<string, React.ReactNode>;
   navInfo?: (val: string) => Record<string, React.ReactElement>;
 };
 
-export type NavItemSlotProps = {
+type NavItemSlotProps = {
   sx?: SxProps<Theme>;
   icon?: SxProps<Theme>;
   texts?: SxProps<Theme>;
@@ -35,7 +35,7 @@ export type NavItemStateProps = {
   enabledRootRedirect?: boolean;
 };
 
-export type NavItemBaseProps = {
+type NavItemBaseProps = {
   path: string;
   title: string;
   children?: any;

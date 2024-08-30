@@ -18,7 +18,7 @@ type BaseRatioType =
   | '1/1'
   | string;
 
-export type ImageRatioType = BaseRatioType | { [key: string]: string };
+type ImageRatioType = BaseRatioType | { [key: string]: string };
 
 export type ImageProps = BoxProps &
   LazyLoadImageProps & {

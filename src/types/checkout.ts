@@ -14,19 +14,19 @@ export type ICheckoutItem = {
   subtotal?: number;
 };
 
-export type ICheckoutDeliveryOption = {
+type ICheckoutDeliveryOption = {
   value: number;
   label: string;
   description: string;
 };
 
-export type ICheckoutPaymentOption = {
+type ICheckoutPaymentOption = {
   value: string;
   label: string;
   description: string;
 };
 
-export type ICheckoutCardOption = {
+type ICheckoutCardOption = {
   value: string;
   label: string;
 };

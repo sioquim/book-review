@@ -4,7 +4,7 @@ import { isEqual } from 'src/utils/helper';
 
 // ----------------------------------------------------------------------
 
-export type UseCookiesReturn<T> = {
+type UseCookiesReturn<T> = {
   state: T;
   canReset: boolean;
   resetState: () => void;

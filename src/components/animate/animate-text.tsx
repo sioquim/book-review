@@ -22,7 +22,7 @@ export const animateTextClasses = {
   dataIndex: '[data-columns="3"]',
 };
 
-export type AnimateTextProps = TypographyProps & {
+type AnimateTextProps = TypographyProps & {
   variants?: Variants;
   repeatDelay?: number;
   text: string | string[];

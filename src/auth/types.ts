@@ -1,6 +1,6 @@
-export type UserType = Record<string, any> | null;
+type UserType = Record<string, any> | null;
 
-export type AuthState = {
+type AuthState = {
   user: UserType;
   loading: boolean;
 };

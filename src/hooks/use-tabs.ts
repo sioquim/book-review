@@ -2,7 +2,7 @@ import { useMemo, useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
 
-export type UseTabsReturn = {
+type UseTabsReturn = {
   value: string;
   setValue: React.Dispatch<React.SetStateAction<string>>;
   onChange: (event: React.SyntheticEvent, newValue: string) => void;

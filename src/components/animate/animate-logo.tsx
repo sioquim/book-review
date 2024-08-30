@@ -10,7 +10,7 @@ import { Logo } from '../logo';
 
 // ----------------------------------------------------------------------
 
-export type AnimateLogoProps = BoxProps & {
+type AnimateLogoProps = BoxProps & {
   logo?: React.ReactNode;
 };
 

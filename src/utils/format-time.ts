@@ -11,7 +11,7 @@ dayjs.extend(relativeTime);
 
 // ----------------------------------------------------------------------
 
-export type DatePickerFormat = Dayjs | Date | string | number | null | undefined;
+type DatePickerFormat = Dayjs | Date | string | number | null | undefined;
 
 /**
  * Docs: https://day.js.org/docs/en/display/format
@@ -202,7 +202,7 @@ export function fDateRangeShortLabel(
 
 // ----------------------------------------------------------------------
 
-export type DurationProps = {
+type DurationProps = {
   years?: number;
   months?: number;
   days?: number;

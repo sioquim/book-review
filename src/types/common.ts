@@ -2,7 +2,7 @@ import type { Dayjs } from 'dayjs';
 
 // ----------------------------------------------------------------------
 
-export type IPaymentCard = {
+type IPaymentCard = {
   id: string;
   cardType: string;
   primary?: boolean;
@@ -19,11 +19,11 @@ export type IAddressItem = {
   addressType?: string;
 };
 
-export type IDateValue = string | number | null;
+type IDateValue = string | number | null;
 
-export type IDatePickerControl = Dayjs | null;
+type IDatePickerControl = Dayjs | null;
 
-export type ISocialLink = {
+type ISocialLink = {
   facebook: string;
   instagram: string;
   linkedin: string;

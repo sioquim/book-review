@@ -14,7 +14,7 @@ import { NavToggleButton } from '../components/nav-toggle-button';
 
 // ----------------------------------------------------------------------
 
-export type NavVerticalProps = NavSectionProps & {
+type NavVerticalProps = NavSectionProps & {
   isNavMini: boolean;
   layoutQuery: Breakpoint;
   onToggleNav: () => void;

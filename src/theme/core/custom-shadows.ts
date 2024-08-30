@@ -5,7 +5,7 @@ import type { ThemeColorScheme } from '../types';
 
 // ----------------------------------------------------------------------
 
-export interface CustomShadows {
+interface CustomShadows {
   z1?: string;
   z4?: string;
   z8?: string;

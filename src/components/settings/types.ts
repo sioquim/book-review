@@ -3,7 +3,7 @@ import type { ThemeDirection, ThemeColorScheme } from 'src/theme/types';
 
 // ----------------------------------------------------------------------
 
-export type SettingsCaches = 'localStorage' | 'cookie';
+type SettingsCaches = 'localStorage' | 'cookie';
 
 export type SettingsDrawerProps = {
   sx?: SxProps<Theme>;

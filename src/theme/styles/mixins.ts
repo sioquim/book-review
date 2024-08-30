@@ -49,7 +49,7 @@ export function textGradient(color: string): CSSObject {
  * Usage:
  * ...borderGradient({ color: `to right, ${theme.vars.palette.text.primary}, ${alpha(theme.vars.palette.text.primary, 0.2)}`, padding: '4px' }),
  */
-export type BorderGradientProps = {
+type BorderGradientProps = {
   color?: string;
   padding?: string;
 };
@@ -79,7 +79,7 @@ export function borderGradient(props?: BorderGradientProps): CSSObject {
  * Usage:
  * ...bgGradient({ color: `to right, ${theme.vars.palette.grey[900]} 25%, ${varAlpha(theme.vars.palette.primary.darkerChannel, 0.88)}`, imgUrl: '/assets/background/overlay.png' }),
  */
-export type BgGradientProps = {
+type BgGradientProps = {
   color: string;
   imgUrl?: string;
 };
@@ -100,7 +100,7 @@ export function bgGradient({ color, imgUrl }: BgGradientProps): CSSObject {
  * Usage:
  * ...bgBlur({ color: `varAlpha(theme.vars.palette.background.paperChannel, 0.8)`, imgUrl: '/assets/background/overlay.png', blur: 6 }),
  */
-export type BgBlurProps = {
+type BgBlurProps = {
   color: string;
   blur?: number;
   imgUrl?: string;
@@ -136,13 +136,13 @@ export function bgBlur({ color, blur = 6, imgUrl }: BgBlurProps): CSSObject {
  * Usage:
  * ...maxLine({ line: 2, persistent: theme.typography.caption }),
  */
-export type MediaFontSize = {
+type MediaFontSize = {
   [key: string]: {
     fontSize: React.CSSProperties['fontSize'];
   };
 };
 
-export type MaxLineProps = {
+type MaxLineProps = {
   line: number;
   persistent?: Partial<React.CSSProperties>;
 };

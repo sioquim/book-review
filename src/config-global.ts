@@ -4,7 +4,7 @@ import packageJson from '../package.json';
 
 // ----------------------------------------------------------------------
 
-export type ConfigValue = {
+type ConfigValue = {
   isStaticExport: boolean;
   site: {
     name: string;
