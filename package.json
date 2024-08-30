@@ -1,8 +1,8 @@
 {
-  "name": "@minimal-kit/next-ts",
-  "author": "Minimals",
+  "name": "book-review",
+  "author": "sioquim",
   "version": "6.0.1",
-  "description": "Next & TypeScript",
+  "description": "A mini 'practice' book review app built with Next.js and TypeScript",
   "private": true,
   "scripts": {
     "dev": "next dev -p 8082",
