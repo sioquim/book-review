@@ -103,7 +103,7 @@ type OptionProps = ButtonBaseProps & {
   selected: boolean;
 };
 
-export function LayoutOption({ option, selected, sx, ...other }: OptionProps) {
+function LayoutOption({ option, selected, sx, ...other }: OptionProps) {
   const renderNav = () => {
     const baseStyles = { flexShrink: 0, borderRadius: 1, bgcolor: 'var(--item-bg)' };
 
@@ -223,7 +223,7 @@ export function LayoutOption({ option, selected, sx, ...other }: OptionProps) {
 
 // ----------------------------------------------------------------------
 
-export function ColorOption({ option, selected, sx, ...other }: OptionProps) {
+function ColorOption({ option, selected, sx, ...other }: OptionProps) {
   return (
     <ButtonBase
       disableRipple

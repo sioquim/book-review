@@ -1,5 +1,5 @@
 
-import { Tables } from 'src/database.types';
+import type { Tables } from 'src/database.types';
 
 import { BookReviewItem } from './book-review-item';
 

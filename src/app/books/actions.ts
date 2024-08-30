@@ -1,5 +1,7 @@
 'use server'
 
+import type { TablesInsert, TablesUpdate } from 'src/database.types';
+
 import OpenAI from 'openai';
 import { revalidatePath } from 'next/cache';
 
@@ -7,7 +9,6 @@ import { createClient } from "src/utils/supabase-server";
 
 import { CONFIG } from 'src/config-global';
 import { newBookSchema } from 'src/lib/book/validations';
-import { TablesInsert, TablesUpdate } from 'src/database.types';
 import { bookReviewSchema } from 'src/lib/book-review/validations';
 
 

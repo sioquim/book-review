@@ -1,4 +1,6 @@
 
+import type { Tables } from 'src/database.types';
+
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Rating from '@mui/material/Rating';
@@ -9,8 +11,6 @@ import Typography from '@mui/material/Typography';
 import { useBoolean } from 'src/hooks/use-boolean';
 
 import { fShortenNumber } from 'src/utils/format-number';
-
-import { Tables } from 'src/database.types';
 
 import { Iconify } from 'src/components/iconify';
 

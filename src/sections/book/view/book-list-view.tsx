@@ -3,7 +3,7 @@
 
 import type { Tables } from 'src/database.types';
 
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -31,20 +31,13 @@ type Props = {
 
 export function BookListView({ books }: Props) {
 
-  const [sortBy, setSortBy] = useState('latest');
-
   const search = useSetState<{
     query: string;
     results: Tables<'book'>[];
   }>({ query: '', results: [] });
 
 
-
   const notFound = !books.length;
-
-  const handleSortBy = useCallback((newValue: string) => {
-    setSortBy(newValue);
-  }, []);
 
   const handleSearch = useCallback(
     (inputValue: string) => {

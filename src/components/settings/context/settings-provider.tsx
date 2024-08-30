@@ -13,7 +13,6 @@ import type { SettingsState, SettingsContextValue, SettingsProviderProps } from 
 
 export const SettingsContext = createContext<SettingsContextValue | undefined>(undefined);
 
-export const SettingsConsumer = SettingsContext.Consumer;
 
 // ----------------------------------------------------------------------
 

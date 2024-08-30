@@ -1,18 +1,20 @@
-import { z as zod } from 'zod';
+import type { z as zod } from 'zod';
+import type { TablesInsert } from 'src/database.types';
+import type { DialogProps } from '@mui/material/Dialog';
+
 import { toast } from 'sonner';
 import { useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
 import Typography from '@mui/material/Typography';
 import LoadingButton from '@mui/lab/LoadingButton';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import Dialog, { DialogProps } from '@mui/material/Dialog';
 
-import { TablesInsert } from 'src/database.types';
 import { insertReview } from 'src/app/books/actions';
 import { bookReviewSchema } from 'src/lib/book-review/validations';
 

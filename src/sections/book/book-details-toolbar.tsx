@@ -1,6 +1,8 @@
+import type { StackProps } from '@mui/material/Stack';
+
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import Stack, { StackProps } from '@mui/material/Stack';
 
 import { RouterLink } from 'src/routes/components';
 

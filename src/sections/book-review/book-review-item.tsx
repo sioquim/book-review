@@ -1,4 +1,6 @@
 
+import type { Tables } from 'src/database.types';
+
 import Stack from '@mui/material/Stack';
 import Rating from '@mui/material/Rating';
 import Avatar from '@mui/material/Avatar';
@@ -7,8 +9,6 @@ import ListItemText from '@mui/material/ListItemText';
 
 import { fDate } from 'src/utils/format-time';
 import { fInitials } from 'src/utils/format-text';
-
-import { Tables } from 'src/database.types';
 
 
 // ----------------------------------------------------------------------

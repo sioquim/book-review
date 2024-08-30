@@ -1,3 +1,6 @@
+import type { Tables } from 'src/database.types';
+import type { UseSetStateReturn } from 'src/hooks/use-set-state';
+
 import parse from 'autosuggest-highlight/parse';
 import match from 'autosuggest-highlight/match';
 
@@ -9,10 +12,6 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';
-
-import { UseSetStateReturn } from 'src/hooks/use-set-state';
-
-import { Tables } from 'src/database.types';
 
 import { Iconify } from 'src/components/iconify';
 import { SearchNotFound } from 'src/components/search-not-found';

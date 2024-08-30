@@ -1,3 +1,5 @@
+import type { Tables } from 'src/database.types';
+
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
@@ -13,8 +15,6 @@ import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
 
 import { fDate } from 'src/utils/format-time';
-
-import { Tables } from 'src/database.types';
 
 import { Iconify } from 'src/components/iconify';
 import { usePopover, CustomPopover } from 'src/components/custom-popover';

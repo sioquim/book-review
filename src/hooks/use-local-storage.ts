@@ -77,7 +77,7 @@ export function useLocalStorage<T>(key: string, initialState: T): UseLocalStorag
 
 // ----------------------------------------------------------------------
 
-export function getStorage(key: string) {
+function getStorage(key: string) {
   try {
     const result = localStorageGetItem(key);
 
@@ -91,7 +91,7 @@ export function getStorage(key: string) {
   return null;
 }
 
-export function setStorage<T>(key: string, value: T) {
+function setStorage<T>(key: string, value: T) {
   try {
     const serializedValue = JSON.stringify(value);
     window.localStorage.setItem(key, serializedValue);
@@ -100,7 +100,7 @@ export function setStorage<T>(key: string, value: T) {
   }
 }
 
-export function removeStorage(key: string) {
+function removeStorage(key: string) {
   try {
     window.localStorage.removeItem(key);
   } catch (error) {

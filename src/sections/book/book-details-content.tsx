@@ -1,3 +1,5 @@
+import type { Tables } from 'src/database.types';
+
 import { useMemo } from 'react';
 
 import Card from '@mui/material/Card';
@@ -7,8 +9,6 @@ import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 
 import { fDate } from 'src/utils/format-time';
-
-import { Tables } from 'src/database.types';
 
 import { Iconify } from 'src/components/iconify';
 

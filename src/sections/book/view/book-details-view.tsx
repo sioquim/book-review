@@ -1,10 +1,11 @@
 'use client';
 
+import type { Tables } from 'src/database.types';
+
 import { paths } from 'src/routes/paths';
 
 import { useTabs } from 'src/hooks/use-tabs';
 
-import { Tables } from 'src/database.types';
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { BookDetailsToolbar } from '../book-details-toolbar';

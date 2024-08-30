@@ -1,4 +1,6 @@
-import { z as zod } from 'zod';
+import type { z as zod } from 'zod';
+import type { TablesInsert, TablesUpdate } from 'src/database.types';
+
 import { useForm } from 'react-hook-form';
 import { useMemo, useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -19,7 +21,6 @@ import { useBoolean } from 'src/hooks/use-boolean';
 
 import { newBookSchema } from 'src/lib/book/validations';
 import { BOOK_GENRE_OPTIONS } from 'src/lib/book/constants';
-import { TablesInsert, TablesUpdate } from 'src/database.types';
 import { upsertBook, generateSummary } from 'src/app/books/actions';
 
 import { toast } from 'src/components/snackbar';

@@ -13,7 +13,7 @@ import { varAlpha, stylesMode } from '../../styles';
  * Icons
  * https://icon-sets.iconify.design/solar/close-circle-bold
  */
-export const ChipDeleteIcon = (props: SvgIconProps) => (
+const ChipDeleteIcon = (props: SvgIconProps) => (
   <SvgIcon {...props}>
     <path
       fill="currentColor"
