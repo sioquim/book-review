@@ -13,7 +13,7 @@ import DialogContent from '@mui/material/DialogContent';
 import Dialog, { DialogProps } from '@mui/material/Dialog';
 
 import { TablesInsert } from 'src/database.types';
-import { insertReview } from 'src/app/(index)/actions';
+import { insertReview } from 'src/app/books/actions';
 import { bookReviewSchema } from 'src/lib/book-review/validations';
 
 import { Form, Field } from 'src/components/hook-form';

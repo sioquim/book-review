@@ -1,9 +1,10 @@
 'use client';
 
 
+import type { TablesUpdate } from 'src/database.types';
+
 import { paths } from 'src/routes/paths';
 
-import { TablesUpdate } from 'src/database.types';
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
@@ -22,8 +23,7 @@ export function BookEditView({ book }: Props) {
       <CustomBreadcrumbs
         heading="Edit"
         links={[
-          { name: 'Dashboard', href: paths.root },
-          { name: 'Book', href: paths.root },
+          { name: 'Books', href: paths.books.root },
           { name: book?.title },
         ]}
         sx={{ mb: { xs: 3, md: 5 } }}

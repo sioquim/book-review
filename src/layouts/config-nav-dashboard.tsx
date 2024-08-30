@@ -51,11 +51,11 @@ export const navData = [
     items: [
       {
         title: 'Books',
-        path: paths.root,
+        path: paths.books.root,
         icon: ICONS.book,
         children: [
-          { title: 'List', path: paths.root },
-          { title: 'Create', path: paths.new },
+          { title: 'List', path: paths.books.root },
+          { title: 'Create', path: paths.books.new },
         ],
       }
     ],

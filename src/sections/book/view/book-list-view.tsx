@@ -77,13 +77,13 @@ export function BookListView({ books }: Props) {
       <CustomBreadcrumbs
         heading="List"
         links={[
-          { name: 'Book', href: paths.root },
+          { name: 'Books', href: paths.books.root },
           { name: 'List' },
         ]}
         action={
           <Button
             component={RouterLink}
-            href={paths.new}
+            href={paths.books.new}
             variant="contained"
             startIcon={<Iconify icon="mingcute:add-line" />}
           >

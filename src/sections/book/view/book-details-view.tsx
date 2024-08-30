@@ -23,8 +23,8 @@ export function BookDetailsView({ book }: Props) {
   return (
     <DashboardContent>
       <BookDetailsToolbar
-        backLink={paths.root}
-        editLink={paths.edit(`${book?.id}`)}
+        backLink={paths.books.root}
+        editLink={paths.books.edit(`${book?.id}`)}
       />
 
       {tabs.value === 'content' && <BookDetailsContent book={book} />}

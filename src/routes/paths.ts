@@ -17,10 +17,12 @@ const ROOTS = {
 // ----------------------------------------------------------------------
 
 export const paths = {
-	root: `/`,
-	new: `/new`,
-	details: (id: string) => `/${id}`,
-	edit: (id: string) => `/book/${id}/edit`,
+	books: {
+		root: `/books/`,
+		new: `/books/new`,
+		details: (id: string) => `/books/${id}`,
+		edit: (id: string) => `/books/${id}/edit`
+	},
 	comingSoon: '/coming-soon',
 	maintenance: '/maintenance',
 	pricing: '/pricing',

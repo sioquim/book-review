@@ -1,3 +1,5 @@
+import { Container } from '@mui/material';
+
 import { DashboardLayout } from 'src/layouts/dashboard';
 
 
@@ -9,6 +11,8 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <DashboardLayout>{children}</DashboardLayout>
+    <DashboardLayout>
+      <Container maxWidth="lg">{children}</Container>
+    </DashboardLayout>
   );
 }

@@ -17,8 +17,7 @@ export function BookCreateView() {
       <CustomBreadcrumbs
         heading="Add a new book"
         links={[
-          { name: 'Dashboard', href: paths.root },
-          { name: 'Book', href: paths.root },
+          { name: 'Books', href: paths.books.root },
           { name: 'New book' },
         ]}
         sx={{ mb: { xs: 3, md: 5 } }}

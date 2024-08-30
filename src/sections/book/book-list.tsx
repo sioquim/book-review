@@ -23,14 +23,14 @@ export function BookList({ books }: Props) {
 
   const handleView = useCallback(
     (id: string) => {
-      router.push(paths.details(id));
+      router.push(paths.books.details(id));
     },
     [router]
   );
 
   const handleEdit = useCallback(
     (id: string) => {
-      router.push(paths.edit(id));
+      router.push(paths.books.edit(id));
     },
     [router]
   );

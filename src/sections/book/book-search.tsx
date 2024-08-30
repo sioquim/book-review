@@ -31,7 +31,7 @@ export function BookSearch({ search, onSearch }: Props) {
   const router = useRouter();
 
   const handleClick = (id: string) => {
-    router.push(paths.details(id));
+    router.push(paths.books.details(id));
   };
 
   const handleKeyUp = (event: React.KeyboardEvent<HTMLInputElement>) => {

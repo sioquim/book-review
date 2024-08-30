@@ -20,7 +20,7 @@ import { useBoolean } from 'src/hooks/use-boolean';
 import { newBookSchema } from 'src/lib/book/validations';
 import { BOOK_GENRE_OPTIONS } from 'src/lib/book/constants';
 import { TablesInsert, TablesUpdate } from 'src/database.types';
-import { upsertBook, generateSummary } from 'src/app/(index)/actions';
+import { upsertBook, generateSummary } from 'src/app/books/actions';
 
 import { toast } from 'src/components/snackbar';
 import { Form, Field } from 'src/components/hook-form';
@@ -108,7 +108,7 @@ export function BookNewEditForm({ currentBook }: Props) {
       } else {
         reset();
         toast.success(currentBook ? 'Update success!' : 'Create success!');
-        router.push(paths.root);
+        router.push(paths.books.root);
       }
     } catch (error) {
       console.error(error);

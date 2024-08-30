@@ -51,7 +51,7 @@ export function BookItem({ book, onView, onEdit, onDelete }: Props) {
             primary={
               <Link
                 component={RouterLink}
-                href={paths.details(book.id)}
+                href={paths.books.details(book.id)}
                 color="inherit"
               >
                 {book.title}
