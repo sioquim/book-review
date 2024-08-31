@@ -1,4 +1,6 @@
-export const BOOK_GENRE_OPTIONS = [
+import type { Enums } from "src/database.types";
+
+export const BOOK_GENRE_OPTIONS: Enums<'book_genre'>[] = [
     'Fiction',
     'Non-fiction',
     'Mystery',

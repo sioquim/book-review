@@ -13,10 +13,9 @@ export type Database = {
         Row: {
           author: string
           created_at: string
-          genre: string | null
+          genre: Database["public"]["Enums"]["book_genre"] | null
           id: string
           isbn: string
-          path: string | null
           published: string | null
           summary: string | null
           title: string
@@ -24,10 +23,9 @@ export type Database = {
         Insert: {
           author: string
           created_at?: string
-          genre?: string | null
+          genre?: Database["public"]["Enums"]["book_genre"] | null
           id?: string
           isbn: string
-          path?: string | null
           published?: string | null
           summary?: string | null
           title: string
@@ -35,10 +33,9 @@ export type Database = {
         Update: {
           author?: string
           created_at?: string
-          genre?: string | null
+          genre?: Database["public"]["Enums"]["book_genre"] | null
           id?: string
           isbn?: string
-          path?: string | null
           published?: string | null
           summary?: string | null
           title?: string
@@ -91,7 +88,37 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      book_genre:
+        | "Fiction"
+        | "Non-fiction"
+        | "Mystery"
+        | "Thriller"
+        | "Romance"
+        | "Science Fiction"
+        | "Fantasy"
+        | "Horror"
+        | "Historical Fiction"
+        | "Biography"
+        | "Autobiography"
+        | "Memoir"
+        | "Self-help"
+        | "Business"
+        | "Philosophy"
+        | "Poetry"
+        | "Drama"
+        | "Adventure"
+        | "Young Adult"
+        | "Children's"
+        | "Graphic Novel"
+        | "Crime"
+        | "Dystopian"
+        | "Humor"
+        | "Travel"
+        | "Cookbook"
+        | "Art"
+        | "Science"
+        | "Technology"
+        | "History"
     }
     CompositeTypes: {
       [_ in never]: never
