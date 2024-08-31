@@ -1,6 +1,7 @@
 import type { z as zod } from 'zod';
 import type { TablesInsert, TablesUpdate } from 'src/database.types';
 
+import dayjs from 'dayjs';
 import { useForm } from 'react-hook-form';
 import { useMemo, useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -136,7 +137,7 @@ export function BookNewEditForm({ currentBook }: Props) {
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4}>
           <Stack spacing={1.5} sx={{ width: { xs: '100%', sm: '50%' } }}>
             <Typography variant="subtitle2">Publish Date</Typography>
-            <Field.DatePicker name="published" />
+            <Field.DatePicker name="published" maxDate={dayjs()} />
           </Stack>
 
           <Stack spacing={1.5} sx={{ width: { xs: '100%', sm: '50%' } }}>

@@ -15,10 +15,10 @@ export function BookCreateView() {
   return (
     <DashboardContent>
       <CustomBreadcrumbs
-        heading="Add a new book"
+        heading="Create a new book"
         links={[
           { name: 'Books', href: paths.books.root },
-          { name: 'New book' },
+          { name: 'Create' },
         ]}
         sx={{ mb: { xs: 3, md: 5 } }}
       />

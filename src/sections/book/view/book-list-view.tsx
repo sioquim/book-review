@@ -70,8 +70,7 @@ export function BookListView({ books }: Props) {
       <CustomBreadcrumbs
         heading="List"
         links={[
-          { name: 'Books', href: paths.books.root },
-          { name: 'List' },
+          { name: 'Books' },
         ]}
         action={
           <Button
