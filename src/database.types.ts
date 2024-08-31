@@ -1,4 +1,4 @@
-type Json =
+export type Json =
   | string
   | number
   | boolean
@@ -6,7 +6,7 @@ type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
-type Database = {
+export type Database = {
   public: {
     Tables: {
       book: {
@@ -168,7 +168,7 @@ export type TablesUpdate<
       : never
     : never
 
-type Enums<
+export type Enums<
   PublicEnumNameOrOptions extends
     | keyof PublicSchema["Enums"]
     | { schema: keyof Database },
