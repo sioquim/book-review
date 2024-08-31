@@ -10,7 +10,7 @@ import { BookEditView } from 'src/sections/book/view';
 
 // ----------------------------------------------------------------------
 
-export const metadata = { title: `Job details | Dashboard - ${CONFIG.site.name}` };
+export const metadata = { title: `Book edit | Dashboard - ${CONFIG.site.name}` };
 
 type Props = {
   params: { id: string };

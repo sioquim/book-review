@@ -63,7 +63,7 @@ describe('upsertBook', () => {
 		});
 
 		expect(result).toEqual({ message: 'Success' });
-		expect(revalidatePath).toHaveBeenCalledWith('/');
+		expect(revalidatePath).toHaveBeenCalledWith('/books');
 	});
 
 	it('should return an error if a book with the same title or ISBN already exists', async () => {

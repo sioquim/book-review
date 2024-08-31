@@ -19,6 +19,7 @@ import { useRouter } from 'src/routes/hooks';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
+import { CONFIG } from 'src/config-global';
 import { newBookSchema } from 'src/lib/book/validations';
 import { BOOK_GENRE_OPTIONS } from 'src/lib/book/constants';
 import { upsertBook, generateSummary } from 'src/app/books/actions';
@@ -156,7 +157,7 @@ export function BookNewEditForm({ currentBook }: Props) {
         <Stack spacing={1.5}>
           <Typography variant="subtitle2">Summary</Typography>
           <Field.Text multiline rows={4} name="summary" placeholder="Enter summary..." />
-          {title?.length && author?.length ? <Box>
+          {title?.length && author?.length && CONFIG.openai?.apiKey?.length ? <Box>
             <LoadingButton loading={generatingSummary.value} variant="outlined" onClick={handleGenerateSummary}>✨ Generate</LoadingButton>
           </Box> : null}
         </Stack>

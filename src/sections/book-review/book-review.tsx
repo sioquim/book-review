@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
-import { fShortenNumber } from 'src/utils/format-number';
+import { fShortenNumber, fAbsoluteNumber } from 'src/utils/format-number';
 
 import { Iconify } from 'src/components/iconify';
 
@@ -39,7 +39,7 @@ export function BookDetailsReview({
       <Typography variant="subtitle2">Average rating</Typography>
 
       <Typography variant="h2">
-        {averageRating}
+        {fAbsoluteNumber(averageRating)}
         /5
       </Typography>
 

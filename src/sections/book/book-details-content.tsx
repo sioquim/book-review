@@ -1,12 +1,12 @@
 import type { Tables } from 'src/database.types';
 
-import { useMemo } from 'react';
-
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
+
+import { useBookReviewSummary } from 'src/hooks/book-review/use-book-review-summary';
 
 import { fDate } from 'src/utils/format-time';
 
@@ -68,11 +68,7 @@ export function BookDetailsContent({ book }: Props) {
     </Card>
   );
 
-  const averageRating: number = useMemo(() => {
-    const reviews = book.reviews || [];
-    const sum = reviews.reduce((acc, review) => acc + (review.rating || 0), 0);
-    return reviews.length > 0 ? sum / reviews.length : 0;
-  }, [book.reviews]);
+  const { averageRating } = useBookReviewSummary(book.reviews)
 
   const renderReview = book?.id ? (
     <BookDetailsReview

@@ -26,7 +26,7 @@ import { BookSearch } from '../book-search';
 // ----------------------------------------------------------------------
 
 type Props = {
-  books: Tables<'book'>[];
+  books: Array<Tables<'book'> & { reviews: Tables<'review'>[] }>;
 }
 
 export function BookListView({ books }: Props) {

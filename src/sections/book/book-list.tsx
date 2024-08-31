@@ -15,7 +15,7 @@ import { BookItem } from './book-item';
 // ----------------------------------------------------------------------
 
 type Props = {
-  books: Tables<'book'>[];
+  books: Array<Tables<'book'> & { reviews: Tables<'review'>[] }>;
 };
 
 export function BookList({ books }: Props) {

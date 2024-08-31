@@ -3,6 +3,7 @@ import type { Tables } from 'src/database.types';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
+import { Rating } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import MenuList from '@mui/material/MenuList';
@@ -14,15 +15,19 @@ import ListItemText from '@mui/material/ListItemText';
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
 
-import { fDate } from 'src/utils/format-time';
+import { useBookReviewSummary } from 'src/hooks/book-review/use-book-review-summary';
 
+import { fDate } from 'src/utils/format-time';
+import { fTruncate } from 'src/utils/format-text';
+
+import { Label } from 'src/components/label';
 import { Iconify } from 'src/components/iconify';
 import { usePopover, CustomPopover } from 'src/components/custom-popover';
 
 // ----------------------------------------------------------------------
 
 type Props = {
-  book: Tables<'book'>;
+  book: Tables<'book'> & { reviews: Tables<'review'>[] };
   onView: () => void;
   onEdit: () => void;
   onDelete: () => void;
@@ -31,6 +36,9 @@ type Props = {
 export function BookItem({ book, onView, onEdit, onDelete }: Props) {
   const popover = usePopover();
 
+  const { averageRating } = useBookReviewSummary(book.reviews)
+
+
   return (
     <>
       <Card>
@@ -38,14 +46,7 @@ export function BookItem({ book, onView, onEdit, onDelete }: Props) {
           <Iconify icon="eva:more-vertical-fill" />
         </IconButton>
 
-        <Stack sx={{ p: 3, pb: 2 }}>
-          {/*    <Avatar
-            alt={book.}
-            src={book.company.logo}
-            variant="rounded"
-            sx={{ width: 48, height: 48, mb: 2 }}
-          />
- */}
+        <Stack sx={{ p: 3, pb: 2 }} spacing={2}>
           <ListItemText
             sx={{ mb: 1 }}
             primary={
@@ -57,7 +58,7 @@ export function BookItem({ book, onView, onEdit, onDelete }: Props) {
                 {book.title}
               </Link>
             }
-            secondary={`Posted date: ${fDate(book.created_at)}`}
+            secondary={`${fDate(book.published, 'YYYY')}`}
             primaryTypographyProps={{ typography: 'subtitle1' }}
             secondaryTypographyProps={{
               mt: 1,
@@ -71,11 +72,17 @@ export function BookItem({ book, onView, onEdit, onDelete }: Props) {
             spacing={0.5}
             direction="row"
             alignItems="center"
-            sx={{ color: 'primary.main', typography: 'caption' }}
+            sx={{ typography: 'caption' }}
+            minHeight={52}
           >
-            <Iconify width={16} icon="solar:users-group-rounded-bold" />
-            candidates
+            {fTruncate(book.summary || '', 140)}
           </Stack>
+          <Rating readOnly value={averageRating} precision={0.1} size="small" />
+          <Box>
+            <Label color="info">
+              {book.genre}
+            </Label>
+          </Box>
         </Stack>
 
         <Divider sx={{ borderStyle: 'dashed' }} />
@@ -84,11 +91,11 @@ export function BookItem({ book, onView, onEdit, onDelete }: Props) {
           {[
             {
               label: book.author,
-              icon: <Iconify width={16} icon="carbon:skill-level-basic" sx={{ flexShrink: 0 }} />,
+              icon: <Iconify width={16} icon="solar:user-linear" sx={{ flexShrink: 0 }} />,
             },
             {
-              label: book.summary,
-              icon: <Iconify width={16} icon="carbon:skill-level-basic" sx={{ flexShrink: 0 }} />,
+              label: book.isbn,
+              icon: <Iconify width={16} icon="solar:book-2-broken" sx={{ flexShrink: 0 }} />,
             },
           ].map((item) => (
             <Stack
@@ -133,17 +140,6 @@ export function BookItem({ book, onView, onEdit, onDelete }: Props) {
           >
             <Iconify icon="solar:pen-bold" />
             Edit
-          </MenuItem>
-
-          <MenuItem
-            onClick={() => {
-              popover.onClose();
-              onDelete();
-            }}
-            sx={{ color: 'error.main' }}
-          >
-            <Iconify icon="solar:trash-bin-trash-bold" />
-            Delete
           </MenuItem>
         </MenuList>
       </CustomPopover>

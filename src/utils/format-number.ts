@@ -27,3 +27,12 @@ export function fShortenNumber(
 
 	return fm.replace(/[A-Z]/g, (match) => match.toLowerCase());
 }
+
+export function fAbsoluteNumber(inputValue: InputNumberValue) {
+	if (inputValue == null || inputValue === '') return '';
+
+	const number = Number(inputValue);
+	if (Number.isNaN(number)) return '';
+
+	return Math.round(number).toString();
+}
