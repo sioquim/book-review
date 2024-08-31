@@ -41,12 +41,12 @@ export function BookDetailsContent({ book }: Props) {
     <Card sx={{ p: 3, gap: 2, display: 'flex', flexDirection: 'column' }}>
       {[
         {
-          label: 'Date posted',
+          label: 'Published',
           value: fDate(book?.published),
           icon: <Iconify icon="solar:calendar-date-bold" />,
         },
         {
-          label: 'Employment type',
+          label: 'ISBN',
           value: book?.isbn,
           icon: <Iconify icon="solar:clock-circle-bold" />,
         },
