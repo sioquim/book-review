@@ -133,13 +133,13 @@ export function BookNewEditForm({ currentBook }: Props) {
           <Typography variant="subtitle2">Author</Typography>
           <Field.Text name="author" placeholder="Enter author name..." />
         </Stack>
-        <Stack direction="row" spacing={4}>
-          <Stack spacing={1.5} sx={{ width: '50%' }}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4}>
+          <Stack spacing={1.5} sx={{ width: { xs: '100%', sm: '50%' } }}>
             <Typography variant="subtitle2">Publish Date</Typography>
             <Field.DatePicker name="published" />
           </Stack>
 
-          <Stack spacing={1.5} sx={{ width: '50%' }}>
+          <Stack spacing={1.5} sx={{ width: { xs: '100%', sm: '50%' } }}>
             <Typography variant="subtitle2">ISBN</Typography>
             <Field.Text name="isbn" placeholder="Enter ISBN..." />
           </Stack>
